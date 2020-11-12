@@ -1,4 +1,5 @@
 package pboif2.pkg10119052.latihan43.gajipegawai;
+import java.util.Scanner;
 /**
  *
  * NAMA   : Rizki Dwi nugraha
@@ -64,23 +65,28 @@ public class Pegawai {
     }
     
     public void totalgaji(){
+        Scanner input = new Scanner(System.in);
         System.out.println("### Data Gaji Karyawan PT.KAKATU ###");
         System.out.println("------------------------------------");
-        System.out.println("Nama Karyawan: ");
-        System.out.println("Alamat: ");
-        System.out.println("Uang Transport: ");
-        System.out.println("Uang Tunjangan: ");
-        System.out.println("Gaji Pokok: ");
-        System.out.println("TOTAL GAJI: ");
+        System.out.print("Nama Karyawan: ");
+        this.nama = input.next();
+        System.out.print("Alamat: ");
+        this.alamat = input.next();
+        System.out.print("Uang Transport: ");
+        this.uangtransport = input.nextInt();
+        System.out.print("Uang Tunjangan: ");
+        this.uangtunjangan = input.nextInt();
+        System.out.print("Gaji Pokok: ");
+        this.gajipokok = input.nextInt();
     }
     
     public void tampildata(){
       System.out.println("");
       System.out.println("### Data Gaji Karyawan PT.KAKATU ###");
       System.out.println("--------------------------");
-      System.out.println("Nama Karyawan: Rizki Dwi Nugraha");
-      System.out.println("Alamat: Lembang Dalam 4");
-      System.out.println("Uang Transport: Rp. 250000");
+      System.out.println("Nama Karyawan: "+getNama());
+      System.out.println("Alamat: "+getAlamat());
+      System.out.println("Uang Transport: Rp. "+getUangtransport());
       System.out.println("Uang Tunjangan: Rp. 300000");
       System.out.println("Gaji Pokok: Rp. 4500000");
       System.out.println("TOTAL GAJI: Rp."+getTotalgaji());
